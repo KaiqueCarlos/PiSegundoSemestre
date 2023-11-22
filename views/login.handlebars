@@ -1,342 +1,345 @@
-
-
 <style>
     body {
-    background-color:  rgba(233, 233, 216, 0.681);
-    margin: 0;
-    padding: 0;
-}
+        background-color: rgba(233, 233, 216, 0.681);
+        margin: 0;
+        padding: 0;
+    }
 
-.cabeçalho{
-    display: flex;
-    background-color: rgb(161, 199, 245);
-    height: 35px;
-    justify-content: center;
-    align-items: center;
-    /*box-shadow: 5px 5px 10px #888888;*/
-    font-family: Verdana, sans-serif;
+    .cabeçalho {
+        display: flex;
+        background-color: rgb(161, 199, 245);
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+        /*box-shadow: 5px 5px 10px #888888;*/
+        font-family: Verdana, sans-serif;
 
-}
+    }
 
-nav a{
-    margin-left: 110px;
-    position: relative;
-    right: 100px;
-    text-decoration: none;
-    color:rgb(255, 255, 255);
-    padding: 8px;
-}
-nav a:hover{
-    box-shadow: 5px 5px 10px rgb(138, 134, 134);
-    transition: all 0.6s;
-    
-}
+    nav a {
+        margin-left: 110px;
+        position: relative;
+        right: 100px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 8px;
+    }
 
-.logo{
-    position: absolute;
-    height: 20%;
-   margin-top: 4%;
-    left: 50px;
-    border-radius: 50%;
-}
+    nav a:hover {
+        box-shadow: 5px 5px 10px rgb(138, 134, 134);
+        transition: all 0.6s;
+    }
 
-.logo img{
-    height: 40px;
-    width: 40px;
-}
+    .logo {
+        position: absolute;
+        height: 20%;
+        margin-top: 4%;
+        left: 50px;
+        border-radius: 50%;
+    }
 
-.home{
-    margin-left: 80px;
-    margin-top: 15px;
-}
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
 
-.home a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
+    .home {
+        margin-left: 80px;
+        margin-top: 15px;
+    }
 
-.user{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: aqua;
-    position: absolute;
-    right: 70px;
-    top: 50px;
-}
-/* css da pagina "cadastro de animais"*/
-.pa{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
+    .home a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
 
-.pa input{
-    border-radius: 50px;
-    height: 20px;
-    width: 200px;
-}
+    .user {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: aqua;
+        position: absolute;
+        right: 70px;
+        top: 50px;
+    }
 
-.ca{
-    display: flex;
-    justify-content: center;
-}
+    /* css da pagina "cadastro de animais"*/
+    .pa {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
 
-.tituloctro{
-    margin-top:30px;
-    font-weight: bold;
-    font-family: Verdana, sans-serif;
-}
+    .pa input {
+        border-radius: 50px;
+        height: 20px;
+        width: 200px;
+    }
 
-.quadrodectro{
-    width: 300px;
-    height: 500px;
-    border: solid black 1px;
-    font-family: Verdana, sans-serif;
+    .ca {
+        display: flex;
+        justify-content: center;
+    }
 
-}
+    .tituloctro {
+        margin-top: 30px;
+        font-weight: bold;
+        font-family: Verdana, sans-serif;
+    }
 
-.quadro{
-    display: flex;
-    justify-content: center;
-}
+    .quadrodectro {
+        width: 300px;
+        height: 500px;
+        border: solid black 1px;
+        font-family: Verdana, sans-serif;
 
-.quadrodectro{
-   padding-left: 10px;
-}
+    }
 
-.quadrodectro input{
-    width: 280px;
-    height: 30px;
-    border-radius: 10px;
-}
+    .quadro {
+        display: flex;
+        justify-content: center;
+    }
 
-.imghome img{
-    height: 23px;
-    width: 30px;
-    position: absolute;
-    top: 46px;
-    left: 50px;
- }
+    .quadrodectro {
+        padding-left: 10px;
+    }
 
- /*css da página login html*/
+    .quadrodectro input {
+        width: 280px;
+        height: 30px;
+        border-radius: 10px;
+    }
 
- .divsup{
-    width: 230px;
-    margin-top: 60px;
-    margin-left: 320px;
- }
+    .imghome img {
+        height: 23px;
+        width: 30px;
+        position: absolute;
+        top: 46px;
+        left: 50px;
+    }
 
- .cadastrocli{
-    width: 350px;
-    height: 400px;
-    margin-top: -0px;
-    margin-left: 290px;
-    
- }
- .cadastrocli p{
-    font-family: Verdana, sans-serif;
- }
+    /*css da página login html*/
 
-.cadastrocli input{
-    width: 280px;
-    height: 25px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-}
+    .divsup {
+        width: 230px;
+        margin-top: 60px;
+        margin-left: 320px;
+    }
 
-.botãoentrar{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 35px;
-   width: 285px;
-   margin-left:px;
-   margin-top: 40px;
-   border-radius: 10px;
-   border: solid 1px black;
-   background-color: rgb(255, 255, 255);
-   text-decoration: none;
-   font-family: Verdana, sans-serif;
-}
+    .cadastrocli {
+        width: 350px;
+        height: 400px;
+        margin-top: -0px;
+        margin-left: 290px;
 
-a .botãoentrar{
-    text-decoration: none;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
+    }
 
-.imagemdireita{
-    position:absolute;
-    height: 500px;
-    width: 500px;
-    background-color: #dcd9d9;
-    left: 780px;
-    bottom: 77px;
-    background-image: url("imagem_login.jpg");
-    background-size: cover;
-    background-position: center;   
-}
+    .card p {
+        font-family: Verdana, sans-serif;
+    }
 
-/*css da página cadastro de cliente */
+    .card input {
+        width: 280px;
+        height: 25px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
 
-.ptext{
-    height: 250px;
-    width: 400px;
-    /*background-color: rgb(187, 187, 187);*/
-    margin-left: 100px;
-    margin-top: 50px;
-    font-family: Verdana, sans-serif;
-}
+    .botãoentrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 285px;
+        margin-left: px;
+        margin-top: 40px;
+        border-radius: 10px;
+        border: solid 1px black;
+        background-color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: Verdana, sans-serif;
+    }
 
-.dados{
-    width: 300px;
-    height: 570px;
-    /*background-color: #ffffff;*/
-    position: absolute;
-    left: 650px;
-    top: 120px;
-    border: solid 1px;
-    font-family: Verdana, sans-serif;
-}
+    a .botãoentrar {
+        text-decoration: none;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-.endress{
-    margin-left: 44px;
-    margin-bottom: 20px;
-    font-family: Verdana, sans-serif;
-    
-}
- .dp{
-    margin-left: 90px;
- }
-.endress input{
-    height: 20px;
-    width: 200px;;
-}
-.endress p{
-    margin-bottom: 0%;
-}
+    .imagemdireita {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        background-color: #dcd9d9;
+        left: 780px;
+        bottom: 77px;
+        background-image: url("imagem_login.jpg");
+        background-size: cover;
+        background-position: center;
+    }
 
-a.enter{
-    position:relative;
-    left: 290px;
-    bottom: 150px;
-    background-color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 10px 130px;
-    color: black;
-    font-family: Verdana, sans-serif;
-}
+    /*css da página cadastro de cliente */
 
-a.enter:hover{
-    background-color: rgb(37, 201, 146);
-}
+    .ptext {
+        height: 250px;
+        width: 400px;
+        /*background-color: rgb(187, 187, 187);*/
+        margin-left: 100px;
+        margin-top: 50px;
+        font-family: Verdana, sans-serif;
+    }
 
-a.botãocriar{
-    text-decoration: none;
-    color:black;
-    position:relative;
-    top:20px;
-    left: 75px;
-    border: solid 1px;
-    padding: 10px 40px;
-    background-color: rgb(255, 255, 255);
-}
+    .dados {
+        width: 300px;
+        height: 570px;
+        /*background-color: #ffffff;*/
+        position: absolute;
+        left: 650px;
+        top: 120px;
+        border: solid 1px;
+        font-family: Verdana, sans-serif;
+    }
 
-a.crie_conta{
-    position:relative;
-    left: 20px;
-    bottom: 85px;
-    text-decoration: none;
-    
-}
+    .endress {
+        margin-left: 44px;
+        margin-bottom: 20px;
+        font-family: Verdana, sans-serif;
 
-/*css da pagina_inicial*/
+    }
 
-.imagemcentral{
-    position: absolute;
-    left: 450px;
-    top: 150px;
-}
+    .dp {
+        margin-left: 90px;
+    }
 
-.fundoinicio{
-    background-color:rgba(233, 233, 216, 0.681);
-    
-}
+    .endress input {
+        height: 20px;
+        width: 200px;
+        ;
+    }
 
-/*css da pagina pesqusaanimal */
+    .endress p {
+        margin-bottom: 0%;
+    }
 
-.sub{
-    height: 500px;
-    width: 1000px;
-    /*background-color: #dcd9d9;*/
-    position: absolute;
-    left: 240px;
-    top: 120px;
-    text-align: center;
-    border-radius: 10px;
-    font-family:  verdana ,sans-serif;
-    
-    
-}
+    a.enter {
+        position: relative;
+        left: 290px;
+        bottom: 150px;
+        background-color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px 130px;
+        color: black;
+        font-family: Verdana, sans-serif;
+    }
 
+    a.enter:hover {
+        background-color: rgb(37, 201, 146);
+    }
 
+    a.botãocriar {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        top: 20px;
+        left: 75px;
+        border: solid 1px;
+        padding: 10px 40px;
+        background-color: rgb(255, 255, 255);
+    }
 
-.results{
-    height: 100px;
-    width: 800px;
-    background-color: rgb(184, 184, 184);
-    margin-top: 30px;
-    position: relative;
-    left: 100px;
-    border-radius: 10px;
-}
+    a.crie_conta {
+        position: relative;
+        left: 20px;
+        bottom: 85px;
+        text-decoration: none;
 
+    }
 
+    /*css da pagina_inicial*/
 
+    .imagemcentral {
+        position: absolute;
+        left: 450px;
+        top: 150px;
+    }
 
+    .fundoinicio {
+        background-color: rgba(233, 233, 216, 0.681);
+    }
 
+    /*css da pagina pesqusaanimal */
 
+    .sub {
+        height: 500px;
+        width: 1000px;
+        /*background-color: #dcd9d9;*/
+        position: absolute;
+        left: 240px;
+        top: 120px;
+        text-align: center;
+        border-radius: 10px;
+        font-family: verdana, sans-serif;
+    }
 
-
-
-
-
-
-
+    .results {
+        height: 100px;
+        width: 800px;
+        background-color: rgb(184, 184, 184);
+        margin-top: 30px;
+        position: relative;
+        left: 100px;
+        border-radius: 10px;
+    }
 </style>
-    <div class="cabeçalho">
-        <img class="logo" src="/img/logo.png">
 
-        <nav>
-            <a href="#">home</a>
-            <a href="#">fale conosco</a>
-            <a href="#">notícias</a>
-            <a href="#">nossa equipe</a>
-        </nav>
-    </div>
+<div class="cabeçalho">
+    <img class="logo" src="/img/logo.png">
 
-    <div class="user"></div>
-    <img class="divsup" src="/img/logo.png"></img>
+    <nav>
+        <a href="#">home</a>
+        <a href="#">fale conosco</a>
+        <a href="#">notícias</a>
+        <a href="#">nossa equipe</a>
+    </nav>
+</div>
+
+<!--<div class="user"></div>
+<!--<img class="divsup" src="/img/logo.png"></img>-->
+
+<!--<form action="" method="post">
     <div class="cadastrocli">
         <p>E-mail</p>
-        <input type="text">
+        <input type="text" name="email">
         <div class="Senha">
             <p>Senha</p>
         </div>
-        <input type="text">
+        <input type="text" name="senha">
     </div>
-    <a class="enter" href="entrar">Entrar</a>
+    <a class="enter" href="entrar">Entrar</a> 
+    
+</form> -->
+
+<div class="card">
+    <div class="card-body">
+        <form action="" method="post">
+            <label for="email">Email: </label>
+                <input type="email" class="form-control" name="email" required>
+            <label for="senha">Senha: </label>
+                <input type="password" class="form-control" name="senha" required>
+            <button class="btn btn success" type="submit">Entrar</button>
+        </form>
     </div>
-    <div class="imagemdireita"></div>
-    <a class="crie_conta" data-bs-toggle="modal" data-bs-target="#RegistroModal">Ainda não tem conta? Crie uma agora</a>
+</div>
+
+<!--<div class="imagemdireita"></div>-->
+<a class="crie_conta" data-bs-toggle="modal" data-bs-target="#RegistroModal">Ainda não tem uma conta? Cadastre-se agora.</a>
 
 
 
-    <!-- Modal -->
-<form action=""
+<!-- Modal de cadastro de usuário -->
+<form action="/add" method="post" id="cad">
     <div class="modal fade" id="RegistroModal" tabindex="-1" aria-labelledby="RegistroModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -349,55 +352,63 @@ a.crie_conta{
                         <div class="col-md-6">
                             <div class="form-grup">
                                 <label for="">Nome</label>
-                                <input id="txtNome" type="text" class="form-control" placeholder="digite seu nome...">
+                                <input id="txtNome" name="nome" type="text" class="form-control"
+                                    placeholder="digite seu nome...">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grup">
                                 <label for="">Sobrenome</label>
-                                <input id="txtSobrenome" type="text" class="form-control" placeholder="digite seu nome...">
+                                <input id="txtSobrenome" name="sobrenome" type="text" class="form-control"
+                                    placeholder="digite seu nome...">
                             </div>
-                        </div>       
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-grup">
                                 <label for="">Email</label>
-                                <input id="txtEmail" type="text" class="form-control" placeholder="digite seu e-mail...">
+                                <input id="txtEmail" name="email" type="varchar" class="form-control"
+                                    placeholder="digite seu e-mail...">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grup">
                                 <label for="">Senha</label>
-                                <input id="txtSenha" type="password" class="form-control"
+                                <input id="txtSenha" name="senha" type="password" class="form-control"
                                     placeholder="crie uma senha...">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grup">
-                                <label for="">Endereço</label>
-                                <input id="txtEnderco" type="text" class="form-control" placeholder="digite seu endereço...">
+                                <label for="">Cidade</label>
+                                <input id="txtCidade" name="cidade" type="text" class="form-control"
+                                    placeholder="cidade...">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grup">
                                 <label for="">Telefone</label>
-                                <input id="txtTelefone" type="number" class="form-control" placeholder="digite seu telefone...">
+                                <input id="txtTelefone" name="telefone" type="varchar" class="form-control"
+                                    placeholder="digite seu telefone...">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="submit" onclick=limparFormulario() class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>
     </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
