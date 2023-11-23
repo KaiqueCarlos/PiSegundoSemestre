@@ -3,6 +3,7 @@ const app = express();
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const Post = require('./models/Post');
+
 //const session = require('express-session');
 
 
@@ -15,8 +16,7 @@ app.use(bodyParser.json());
 // Middleware para analisar dados de formulário (application/x-www-form-urlencoded)
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Seção de usuário
-//app.use(session({ secret: 'hghjhhjhk' }));
+
 
 // Rotas para a página de login
 app.get('/', (req, res) => {
@@ -49,6 +49,16 @@ app.post('/addAnimal', function (req, res) {
     sexo: req.body.sexo,
     idade: req.body.idade
   })
+});
+
+app.get('/getRacas', async (req, res) => {
+  try {
+    const [result] = await sequelize.query('SELECT * FROM Racas');
+    res.json(result);
+  } catch (error) {
+    console.error('Erro ao obter raças do banco de dados:', error);
+    res.status(500).json({ error: 'Erro ao obter raças do banco de dados' });
+  }
 });
 
 

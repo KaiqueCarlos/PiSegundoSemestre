@@ -330,7 +330,7 @@
     <button onclick="openCadAnimal()">Cadastrar Animal</button>
     <div class="formCadAnimal">
         <form action="/addAnimal" method="post" name="CadAnimal" id="CadAnimal">
-        
+
             <p>Nome</p>
             <input type="text" name="nome">
 
@@ -350,14 +350,7 @@
             <label for="raca">Raça</label>
             <select id="raca" name="sexo">
                 <option value="">-</option>
-                <option value="Indefinido">Indefinido</option>
-                <option value="Bull Dog">Bull Dog</option>
-                <option value="Golden Retriever">Golden Retriever</option>
-                <option value="Pastor Alemão">Pastor Alemão</option>
-                <option value="Pinscher">Pinscher</option>
-                <option value="Pitbull">Pitbull</option>
-                <option value="Poodle">Poodle</option>
-                <option value="Rottweiller">Rottweiller</option>   
+
             </select>
             <!--<p>Raça</p>
             <input type="text" name="raca">-->
@@ -391,7 +384,7 @@
         <label for="especie">Escolha a Espécie:</label>
         <select id="especie" name="especie">
             <option value="">Todas</option>
-            
+
         </select>
 
         <label for="raca">Escolha a raça:</label>
@@ -402,12 +395,12 @@
         <label for="sexo">Escolha o sexo:</label>
         <select id="sexo" name="sexo">
             <option value="">Todos</option>
-            
+
         </select>
 
-            
+
         </select>
-         <button type="submit">Buscar</button>
+        <button type="submit">Buscar</button>
     </form>
 
     <!-- Código js para acessar o formulário de cadastro de animais-->
@@ -423,6 +416,9 @@
         }
 
         function openBuscarParceiros() {
+
+             fillRacasCombo();
+
             // Obtém o elemento do formulário pelo ID
             var form = document.getElementById("busca");
             if (form.style.display === "none" || form.style.display === "") {
@@ -430,5 +426,30 @@
             } else {
                 form.style.display = "none";
             }
+
+            async function fillRacasCombo() {
+            try {
+                const response = await fetch('/getRacas');
+                const data = await response.json();
+
+                var racaSelect = document.getElementById('raca');
+                racaSelect.innerHTML = '<option value="">-</option>'; // Opção padrão
+
+                // Preencher as opções do select com os dados obtidos
+                data.forEach(function (raca) {
+                    var option = document.createElement('option');
+                    option.value = raca.id;
+                    option.text = raca.nome;
+                    racaSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Erro ao obter raças:', error);
+            }
         }
+
+            
+
+
+        }
+
     </script>
